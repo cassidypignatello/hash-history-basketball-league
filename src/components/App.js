@@ -7,6 +7,7 @@ import {
 import Home from './Home'
 import Players from './Players'
 import Teams from './Teams'
+import Team from './Team'
 import Navbar from './Navbar'
 
 export default class App extends Component {
@@ -19,6 +20,7 @@ export default class App extends Component {
             <Route exact path='/' component={Home} />
             <Route path='/players' component={Players} />
             <Route path='/teams' component={Teams} />
+            <Route path='/:teamId' component={Team} />
             <Route render={({ location }) => (
               <h3 className='text-center'>Sorry, {location.pathname} wasn't found. Please check the URL and try again.</h3>
             )} />
